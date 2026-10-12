@@ -268,6 +268,7 @@ code { font-size:.78rem; color:var(--text); word-break:break-all; }
   #archify-frame { min-width:760px; height:520px; }
   .swipe-hint { display:block; }
 }
+@media (min-width: 761px) { .cards .card:last-child:nth-child(odd) { grid-column: 1 / -1; } }
 </style>
 </head>
 <body>
@@ -276,8 +277,8 @@ code { font-size:.78rem; color:var(--text); word-break:break-all; }
     <div class="header-row">
       <div class="title-wrap">
         <p class="eyebrow">LAST30DAYS / RESEARCH BRIEF</p>
-        <h1><span class="hdot"></span><span class="badge-text">🌐 last30days v3.27.1 · synced 2026-10-08</span></h1>
-        <p class="subtitle">主題：grok bot 應用 · 2026-09-08 至 2026-10-08</p>
+        <h1><span class="hdot"></span><span class="badge-text">🌐 last30days v3.27.1 · synced 2026-10-12</span></h1>
+        <p class="subtitle">主題：grok bot 應用 · 2026-09-12 至 2026-10-12</p>
       </div>
       <div class="toolbar">
         <button id="theme-btn" class="tb-btn" type="button" aria-label="切換深淺色主題"><span class="sw"></span><span id="theme-label">淺色</span></button>
@@ -293,33 +294,28 @@ code { font-size:.78rem; color:var(--text); word-break:break-all; }
     <div class="cards">
     <article class="card k-frontend" id="s1">
       <div class="card-head"><span class="dot"></span><span class="idx">01</span></div>
-      <h3>主流玩法係<q>一個 Bot 一份工</q>，砌成自己嘅 AI 團隊</h3>
-      <ul><li>過去 <b class="num">30</b> 日大家講得最多嘅，唔係將 Grok Bot 當另一個 chat 視窗，而係拆成幾個各有分工嘅 Bot。</li><li>Grok Bot 首席工程師 <a href="https://x.com/poteto/status/2107510472601985336" target="_blank" rel="noopener noreferrer">@poteto</a> 一篇 <b class="num">1,520</b> 個 like 嘅帖文話，佢最鍾意用 Grok Bot 處理工作嘅<q>第一哩同最後一哩</q>：先接通 calendar、CRM、Slack、email 搵出應該做乜，再用 routine 定時（<q>每朝 check email</q>）或者按事件觸發（<q>呢個 Slack channel 有新訊息就做</q>）。</li><li><a href="https://x.com/0xjmori/status/2107832864884576299" target="_blank" rel="noopener noreferrer">@0xjmori</a> 將官方 playbook 整理成 <b class="num">12</b> 頁操作手冊，重點係一個 Bot 只管一份工、先定好完成標準、有結構嘅工作用 connector、網頁工作用瀏覽器、登入 2FA 同 CAPTCHA 交返俾人，做得成功先存做 skill。</li><li><a href="https://x.com/s4yonnara/status/2107516227790766322" target="_blank" rel="noopener noreferrer">SpaceXAI 自己 55 分鐘嘅 GTM 示範</a>都係同一套思路：<q>Different bots. Different jobs. One team.</q></li></ul>
+      <h3>Bot 有自己個 email 同識睇 X，即刻多咗一堆新玩法</h3>
+      <ul><li>呢幾日最大嘅變化係 Grok Bot 開始<a href="https://teslanorth.com/2026/10/08/grok-bot-search-read-monitor-x/" target="_blank" rel="noopener noreferrer">可以自己搜尋、閱讀同監察 X，唔使再駁 connector</a>，跟住 <b class="num">10</b> 月 <b class="num">9</b> 號 @bot 又宣佈 Bot <a href="https://teslanorth.com/2026/10/09/grok-bot-email-inboxes/" target="_blank" rel="noopener noreferrer">可以攞自己嘅 email inbox</a>，原話係<q>To claim your inbox, just ask Bot.</q>，公司帳戶就要 admin 開咗先用到。</li><li>r/GrokBot 嗰個「<a href="https://www.reddit.com/r/GrokBot/comments/1x1soz2/grok_bot_now_has_its_own_email/" target="_blank" rel="noopener noreferrer">Grok Bot now has its own email</a>」有 <b class="num">48</b> 分。</li><li><a href="https://www.youtube.com/watch?v=q7lekwOXXqk" target="_blank" rel="noopener noreferrer">Kacper Rutkiewicz</a> 一條 <b class="num">24,416</b> views 嘅片示範用一段 <b class="num">33</b> 秒語音，叫 Bot 掃過去 <b class="num">48</b> 小時 X 上面大家點用 Grok Bot，再分派俾唔同 agent 做，最後用自己個 email 寄結果。</li><li><a href="https://x.com/dr_cintas/status/2109020038803894694" target="_blank" rel="noopener noreferrer">@dr_cintas</a> <b class="num">252</b> 個 like 嘅帖文就直接俾咗 <b class="num">10</b> 個 X routine 範本，例如<q>Weekdays at 9am, find AI launches from the last 24h</q>。</li></ul>
     </article>
     <article class="card k-backend" id="s2">
       <div class="card-head"><span class="dot"></span><span class="idx">02</span></div>
-      <h3>工作用途集中喺銷售、營運同工程，唔止工程師用</h3>
-      <ul><li><a href="https://x.ai/news/grok-bot-for-enterprise" target="_blank" rel="noopener noreferrer">SpaceXAI 企業版公告</a>話 Legora、Supermicro、ServiceTitan 等客戶<q>heaviest use is outside engineering</q>：Bot 會睇目標客戶嘅 webinar 再擬 LinkedIn 同 email 草稿、通宵 prospect 出 shortlist、採購 Bot 監察供應商開支同續約。</li><li>實際用家例子都對得上：<a href="https://jamespember.substack.com/p/grok-bot-is-really-good" target="_blank" rel="noopener noreferrer">James Pember</a> 嘅 Bot 喺 Slack 自動分流產品 bug，仲會幫佢砌好兩星期一次產品營銷會議嘅 pre-read；</li><li>r/GrokBot 有人用 <a href="https://www.reddit.com/r/GrokBot/comments/1wz4qxq/running_an_11agent_team_on_grok_bot_for_my/" target="_blank" rel="noopener noreferrer">11 個 agent 做交易前準備</a>，話每個 agent 有自己嘅雲端電腦，之前成日壞嘅 scraping 問題大致解決咗。</li><li><a href="https://x.com/AndrewWarner/status/2107151668819243095" target="_blank" rel="noopener noreferrer">@AndrewWarner</a> 列出 <b class="num">12</b> 個用例，包括開完會跟進、砍訂閱費、經批准先退款、管理 Facebook Marketplace 同 inbox 分流。</li></ul>
+      <h3>一個 Bot 一份工照舊係主流，而家仲識搞<q>Chief of Staff</q></h3>
+      <ul><li><a href="https://x.com/ericosiu/status/2109418826995503377" target="_blank" rel="noopener noreferrer">@ericosiu</a> 列咗佢團隊喺 Grok Bot 上面跑緊嘅 <b class="num">21</b> 個用例，由 SEO/AEO、招聘到贊助報價都有，總結係<q>Each bot gets one job, and send, publish and spend stay behind a human yes.</q>。</li><li><a href="https://x.com/distortgeekin/status/2108897917729738810" target="_blank" rel="noopener noreferrer">@distortgeekin</a> <b class="num">349</b> 個 like 嘅文章話六個 Bot 可以帶 <b class="num">200+</b> 個 agent，朝早 <b class="num">5</b> 點自己開 standup，再交一張 board 俾你。</li><li><a href="https://x.com/s4yonnara/status/2108981693772157152" target="_blank" rel="noopener noreferrer">@s4yonnara</a> 整理嘅流程係<q>You → Chief of Staff → Agent Teams → Verification → Done</q>。</li><li>SpaceXAI 又出咗一個 <a href="https://x.com/silentguyy66/status/2109290920361251136" target="_blank" rel="noopener noreferrer">54 分鐘嘅免費 workshop</a>，示範 routine、每個 Bot 自己嘅記憶，同埋喺 Linear 開 ticket 分流。</li></ul>
     </article>
     <article class="card k-database" id="s3">
       <div class="card-head"><span class="dot"></span><span class="idx">03</span></div>
-      <h3>個人生活用途愈嚟愈多，非技術人士都玩得起</h3>
-      <ul><li><a href="https://www.youtube.com/watch?v=kXfHQbyMjkc" target="_blank" rel="noopener noreferrer">Paul J Lipsky</a> 一條 <b class="num">90,573</b> views 嘅片示範屋企維修提醒、每三星期自動約剪頭髮、健身同卡路里追蹤；</li><li><a href="https://www.youtube.com/watch?v=BsNHg6cNjZE" target="_blank" rel="noopener noreferrer">Matthew Berman</a> 就講用 Bot 慳錢、排 calendar、約 appointment 甚至控制 Tesla。</li><li>TikTok 上 <a href="https://www.tiktok.com/@artzenmedia/video/7693862586223250706" target="_blank" rel="noopener noreferrer">artzenmedia</a> 用三個 Bot 處理錢銀雜務，搵返 <b class="num">$283</b> 唔再用嘅訂閱；</li><li>Instagram 嘅 <a href="https://www.instagram.com/reel/DeNZBPkJmpy/" target="_blank" rel="noopener noreferrer">rachel.points</a> 用研究員 Bot 追航空里數轉換優惠，再交俾另一個 Bot 更新網站。</li><li>r/GrokBot 亦有人整咗個<a href="https://www.reddit.com/r/GrokBot/comments/1wyryfc/my_grok_bot_setup_for_a_daily_life_checkin_not_a/" target="_blank" rel="noopener noreferrer">每日生活 check-in Bot</a>，刻意唔做 inbox 同 calendar 嗰類 chief of staff。</li><li>吉隆坡 meetup 嘅 <a href="https://x.com/mohtashamdotdev/status/2101578352008020286" target="_blank" rel="noopener noreferrer">@mohtashamdotdev</a> 話 <b class="num">400+</b> 人報名、<b class="num">200</b> 人到場，<q>Non-technical people ran the use cases</q>。</li></ul>
+      <h3>生活用途：理財、買餸、揾工，仲有架車</h3>
+      <ul><li>Instagram 嘅 <a href="https://www.instagram.com/reel/DeSJmBOCTWu/" target="_blank" rel="noopener noreferrer">tom.wickstead</a> 將 Bot 駁落 American Express 同 Asda，叫佢跟住每星期預算出食譜同放晒啲嘢入購物車，有 <b class="num">15,605</b> views；</li><li>留言區 @wutangjules 就問<q>you don’t feel the slightest bit concerned about willingly opening your bank data to Grok?</q>，有 <b class="num">42</b> 個 like。</li><li><a href="https://www.instagram.com/reel/DeSB3MioQso/" target="_blank" rel="noopener noreferrer">techtalkuk</a> 示範用 Bot 揾啱嘅職位、改 CV 同搵 networking 對象。</li><li><a href="https://www.instagram.com/reel/DePaXFgAcEP/" target="_blank" rel="noopener noreferrer">vaibhavsisinty</a> 一條 <b class="num">90,561</b> views 嘅 reel 講 Tesla 車入面已經有 Grok Bot，根據 <a href="https://www.gumtree.com/news/cars/tesla-enables-grok-bot-cybercab-model-y" target="_blank" rel="noopener noreferrer">Gumtree News</a>，<b class="num">10</b> 月 <b class="num">11</b> 號 Tesla 工程師話所有 Cybercab 同其餘 Model Y 都開咗。</li><li>r/GrokBot 嘅「<a href="https://www.reddit.com/r/GrokBot/comments/1x2323i/grok_bot_in_personal_life/" target="_blank" rel="noopener noreferrer">Grok Bot in personal life</a>」有 <b class="num">35</b> 個留言，「<a href="https://www.reddit.com/r/GrokBot/comments/1x1d7n9/how_are_you_all_actually_using_grok_bot_share/" target="_blank" rel="noopener noreferrer">How are you all actually using Grok Bot?</a>」更加有 <b class="num">74</b> 個留言。</li></ul>
     </article>
     <article class="card k-cloud" id="s4">
       <div class="card-head"><span class="dot"></span><span class="idx">04</span></div>
-      <h3>最新更新令玩法再擴闊</h3>
-      <ul><li>今個星期嘅更新令 Grok Bot <a href="https://x.com/Zunbeamzero/status/2108023265260089387" target="_blank" rel="noopener noreferrer">可以將工作分派去 Opus 5.5、Midjourney、Suno 同細啲嘅模型</a>，又加咗專屬 email 地址同新嘅 main bot。</li><li><a href="https://www.youtube.com/watch?v=ZW-HR9XMQKw" target="_blank" rel="noopener noreferrer">Alex Finn</a> 一條 <b class="num">54,538</b> views 嘅片專講呢次更新，r/GrokBot 一個「<a href="https://www.reddit.com/r/GrokBot/comments/1wzsk17/what_does_this_mean_my_grok_bot_runs_on_opus_55/" target="_blank" rel="noopener noreferrer">My grok bot runs on Opus 5.5</a>」嘅討論串有 <b class="num">89</b> 分、<b class="num">46</b> 個留言。</li><li><a href="https://x.com/ericzakariasson/status/2107950637493469664" target="_blank" rel="noopener noreferrer">@ericzakariasson</a> 示範咗一個新用法：叫 Grok Bot 搵晒網上對你產品嘅 feedback、總結再提出計劃，<q>no X account or connector needed</q>，有 <b class="num">932</b> 個 like。</li></ul>
+      <h3>工作上嘅真實用法愈嚟愈具體</h3>
+      <ul><li><a href="https://www.youtube.com/watch?v=douQXfdYGmA" target="_blank" rel="noopener noreferrer">Austin Marchese</a> 一條 <b class="num">34,527</b> views 嘅片拎 Grok Bot 同 Claude 比 <b class="num">12</b> 個日常專業用例，留言區 @BloomingInvestments 話佢用嚟<q>clean up our accounting system, clean up CRM, Desk, create fb ads, Auto answer email</q>，@gamingMattR 就話喺生物科技行業用嚟睇 <b class="num">50</b> 頁文件做總結。</li><li><a href="https://x.com/0xGenAi/status/2108599655114141891" target="_blank" rel="noopener noreferrer">@0xGenAi</a> 整理咗 Grok Bot 團隊免費分享嘅 <b class="num">16</b> 個 Bot 範本，涵蓋 code、內容、銷售同營運。</li><li>TikTok 嘅 <a href="https://www.tiktok.com/@mr.paidsocial/video/7690884738915093774" target="_blank" rel="noopener noreferrer">mr.paidsocial</a> 就教人將 Grok Bot 做執行層，等 Claude Code 或 Codex 做實際工作，話可以大減 Grok Bot 用量。</li></ul>
     </article>
     <article class="card k-messagebus" id="s5">
       <div class="card-head"><span class="dot"></span><span class="idx">05</span></div>
-      <h3>社群生態：模板、GitHub repo 同教學</h3>
-      <ul><li><a href="https://x.com/aiedge_/status/2097897898235269173" target="_blank" rel="noopener noreferrer">@aiedge_</a> 推介一個收集用例、agent、plugin 同模板嘅網站，有 <b class="num">837</b> 個 like；</li><li><a href="https://x.com/reiraxbt/status/2108206209647903016" target="_blank" rel="noopener noreferrer">@reiraxbt</a> 整理咗 <b class="num">20</b> 個 GitHub repo，包括 Grok Bot SDK、Telegram Bridge、iMessage Skill 同 <b class="num">219</b> 個 marketplace plugin。</li><li><a href="https://www.youtube.com/watch?v=q1IwR88mhaA" target="_blank" rel="noopener noreferrer">Charlie Chang 嘅教學</a>有 <b class="num">96,704</b> views，留言區 @Earthwalker_420-fromX 寫：<q>a big empire of Grok bot's that is just epic !</q>。</li><li><a href="https://www.instagram.com/reel/DdKvBEltKAp/" target="_blank" rel="noopener noreferrer">snigdata 喺 GTM Build Night 嘅 reel</a> 總結<q>give AI the outcome, context and tools</q>，@iamshahzadhassan 回應：<q>Yes, to deliver best from bots you have to define context.</q>，另一位 @vineethkumar_ 就話<q>you can find more bot templates from thegrokbots.com</q>。</li></ul>
-    </article>
-    <article class="card k-security" id="s6">
-      <div class="card-head"><span class="dot"></span><span class="idx">06</span></div>
-      <h3>保留意見：用量、成本同<q>賺錢</q>話題</h3>
-      <ul><li>r/GrokBot 有「<a href="https://www.reddit.com/r/GrokBot/comments/1wzsp9y/grok_bot_limits/" target="_blank" rel="noopener noreferrer">Grok Bot Limits</a>」嘅抱怨，官方亦試過<a href="https://www.reddit.com/r/GrokBot/comments/1ww0qnc/weve_reset_usage_limits_for_all_grok_bot_users/" target="_blank" rel="noopener noreferrer">重設所有用家嘅用量上限</a>（<b class="num">45</b> 分、<b class="num">34</b> 個留言）。</li><li>「<a href="https://www.reddit.com/r/GrokBot/comments/1wvhcmh/has_anyone_actually_made_money_from_a_grok_bot/" target="_blank" rel="noopener noreferrer">Has anyone actually made money from a Grok bot?</a>」有 <b class="num">62</b> 個留言，<a href="https://www.tiktok.com/@laeshaai/video/7688876375184264478" target="_blank" rel="noopener noreferrer">laeshaai</a> 一條 <b class="num">52,669</b> views 嘅 TikTok 亦直接問係咪 internet hype。</li><li>r/AI_Agents 有人喺 <a href="https://www.reddit.com/r/AI_Agents/comments/1ww18ca/im_thinking_of_buying_one_of_these_ai_bots_grok/" target="_blank" rel="noopener noreferrer">Grok、MUSE 同 Dots 之間揀</a>（<b class="num">48</b> 個留言），亦有人<a href="https://www.reddit.com/r/GrokBot/comments/1wzc9tc/shall_i_feel_guilty_of_replacing_a_team_member/" target="_blank" rel="noopener noreferrer">問用 Grok Bot 取代一位同事應唔應該內疚</a>。</li><li><a href="https://x.com/bonnyxen/status/2107484554701193247" target="_blank" rel="noopener noreferrer">@bonnyxen</a> 提醒，自動化慳到嘅時間可以好快蝕返，建議用一星期測試先至放手。</li></ul>
+      <h3>用量同成本仍然係最大怨氣</h3>
+      <ul><li>r/GrokBot 有人開帖問「<a href="https://www.reddit.com/r/GrokBot/comments/1x2ay0a/is_grok_bot_ondemand_usage_actually_worth_it_500/" target="_blank" rel="noopener noreferrer">Is Grok bot on-demand usage actually worth it? $500 dollars in one day!</a>」，另一位用家喺「<a href="https://www.reddit.com/r/GrokBot/comments/1x1urcy/update_on_my_usage_experience/" target="_blank" rel="noopener noreferrer">Update on my usage experience</a>」話佢試咗 Muse，覺得用量冇咁快用完。</li><li><a href="https://x.com/fayzonnn/status/2108606707471446327" target="_blank" rel="noopener noreferrer">@fayzonnn</a> 引述一個 <b class="num">$200</b> 計劃用家 <b class="num">3</b> 日就用咗一星期 <b class="num">99</b>% 額度。</li><li><a href="https://www.grokbotwiki.com/guides/grok-bot-whats-new" target="_blank" rel="noopener noreferrer">Grok Bot Wiki</a> 亦記錄咗 <b class="num">10</b> 月 <b class="num">8</b> 號因為模型容量問題，Bot 部分時間覆唔到，routine 被擱置或者標示 Failed，而且錯過咗嘅唔會補跑。</li><li><a href="https://x.com/hugorcd/status/2109038817634361423" target="_blank" rel="noopener noreferrer">@hugorcd</a> 就話一開始唔知可以叫佢做乜，又覺得缺少主動性，只係得 routine。</li></ul>
     </article>
     </div>
   </section>
@@ -14072,28 +14068,28 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 "></iframe>
     </div></div>
     <p class="swipe-hint">← 左右拖動睇成張圖 →</p>
-    <p class="caption">以上流程圖用 Archify workflow 生成，內容取自第 01 段同 KEY PATTERNS 第 1、2 點。</p>
+    <p class="caption">以上流程圖用 Archify workflow 生成（2026-10-08 版本）；今日第 02 段同 KEY PATTERNS 第 2 點嘅做法仍然一致。</p>
   </section>
 
   <section id="patterns" class="section">
     <h2 class="label">KEY PATTERNS from the research:</h2>
     <ol class="patterns">
-      <li class="pat k-frontend"><span class="pat-n">1</span><div><p>一個 Bot 一份工，再用 routine 定時或者按事件觸發，比一個<q>萬能 agent</q>更受推崇</p><span class="cite">來源 · <a href="https://x.com/0xjmori/status/2107832864884576299" target="_blank" rel="noopener noreferrer">@0xjmori</a></span></div></li>
-      <li class="pat k-backend"><span class="pat-n">2</span><div><p>敏感動作（提交、付款、退款）一律要人手批准，例如 Form Filler 要你打 APPROVE 先會提交</p><span class="cite">來源 · <a href="https://www.reddit.com/r/GrokBot/comments/1wyhbj2/form_filler_drafts_rebates_warranty_claims/" target="_blank" rel="noopener noreferrer">r/GrokBot</a></span></div></li>
-      <li class="pat k-database"><span class="pat-n">3</span><div><p>最重度使用喺工程以外：銷售、招聘、市場推廣同財務</p><span class="cite">來源 · <a href="https://x.ai/news/grok-bot-for-enterprise" target="_blank" rel="noopener noreferrer">SpaceXAI</a></span></div></li>
-      <li class="pat k-cloud"><span class="pat-n">4</span><div><p>錢銀雜務係最易見效嘅入門用例，例如搵出冇用嘅訂閱</p><span class="cite">來源 · <a href="https://www.tiktok.com/@artzenmedia/video/7693862586223250706" target="_blank" rel="noopener noreferrer">artzenmedia</a></span></div></li>
-      <li class="pat k-messagebus"><span class="pat-n">5</span><div><p>多個 Bot 分工合作做內容同研究流水線</p><span class="cite">來源 · <a href="https://www.tiktok.com/@brycent_/video/7692462880377031966" target="_blank" rel="noopener noreferrer">brycent_</a></span></div></li>
-      <li class="pat k-security"><span class="pat-n">6</span><div><p>用量上限同<q>真係賺到錢未</q>係最大嘅疑問</p><span class="cite">來源 · <a href="https://www.reddit.com/r/GrokBot/comments/1wvhcmh/has_anyone_actually_made_money_from_a_grok_bot/" target="_blank" rel="noopener noreferrer">r/GrokBot</a></span></div></li>
+      <li class="pat k-frontend"><span class="pat-n">1</span><div><p>Bot 有自己 email 同原生 X 監察之後，<q>每朝掃 X 再寄摘要</q>變咗熱門 routine</p><span class="cite">來源 · <a href="https://x.com/dr_cintas/status/2109020038803894694" target="_blank" rel="noopener noreferrer">@dr_cintas</a></span></div></li>
+      <li class="pat k-backend"><span class="pat-n">2</span><div><p>一個 Bot 一份工，寄嘢、發佈同使錢都要人點頭先做</p><span class="cite">來源 · <a href="https://x.com/ericosiu/status/2109418826995503377" target="_blank" rel="noopener noreferrer">@ericosiu</a></span></div></li>
+      <li class="pat k-database"><span class="pat-n">3</span><div><p>用 Chief of Staff Bot 管成隊 agent，你只需要管一個</p><span class="cite">來源 · <a href="https://x.com/s4yonnara/status/2108981693772157152" target="_blank" rel="noopener noreferrer">@s4yonnara</a></span></div></li>
+      <li class="pat k-cloud"><span class="pat-n">4</span><div><p>個人理財同買餸係最吸睛嘅生活用例，但私隱疑慮跟住嚟</p><span class="cite">來源 · <a href="https://www.instagram.com/reel/DeSJmBOCTWu/" target="_blank" rel="noopener noreferrer">tom.wickstead</a></span></div></li>
+      <li class="pat k-messagebus"><span class="pat-n">5</span><div><p>Grok Bot 由手機同電腦走入 Tesla 同 Cybercab</p><span class="cite">來源 · <a href="https://www.gumtree.com/news/cars/tesla-enables-grok-bot-cybercab-model-y" target="_blank" rel="noopener noreferrer">Gumtree News</a></span></div></li>
+      <li class="pat k-security"><span class="pat-n">6</span><div><p>用量收費同額度仍然係最大疑慮，有人因此試 Muse</p><span class="cite">來源 · <a href="https://www.reddit.com/r/GrokBot/comments/1x1urcy/update_on_my_usage_experience/" target="_blank" rel="noopener noreferrer">r/GrokBot</a></span></div></li>
     </ol>
   </section>
 
   <section id="voices" class="section">
     <h2 class="label">社群聲音</h2>
     <div class="quotes">
-      <figure class="quote"><blockquote>“Non-technical people ran the use cases”</blockquote><figcaption><a href="https://x.com/mohtashamdotdev/status/2101578352008020286" target="_blank" rel="noopener noreferrer">@mohtashamdotdev · 吉隆坡 meetup</a></figcaption></figure>
-      <figure class="quote"><blockquote>“no X account or connector needed”</blockquote><figcaption><a href="https://x.com/ericzakariasson/status/2107950637493469664" target="_blank" rel="noopener noreferrer">@ericzakariasson</a></figcaption></figure>
-      <figure class="quote"><blockquote>“a big empire of Grok bot&#x27;s that is just epic !”</blockquote><figcaption><a href="https://www.youtube.com/watch?v=q1IwR88mhaA" target="_blank" rel="noopener noreferrer">@Earthwalker_420-fromX · Charlie Chang 教學留言</a></figcaption></figure>
-      <figure class="quote"><blockquote>“Yes, to deliver best from bots you have to define context.”</blockquote><figcaption><a href="https://www.instagram.com/reel/DdKvBEltKAp/" target="_blank" rel="noopener noreferrer">@iamshahzadhassan · snigdata reel 留言</a></figcaption></figure>
+      <figure class="quote"><blockquote>“To claim your inbox, just ask Bot.”</blockquote><figcaption><a href="https://teslanorth.com/2026/10/09/grok-bot-email-inboxes/" target="_blank" rel="noopener noreferrer">@bot · 經 TeslaNorth</a></figcaption></figure>
+      <figure class="quote"><blockquote>“Each bot gets one job, and send, publish and spend stay behind a human yes.”</blockquote><figcaption><a href="https://x.com/ericosiu/status/2109418826995503377" target="_blank" rel="noopener noreferrer">@ericosiu</a></figcaption></figure>
+      <figure class="quote"><blockquote>“you don’t feel the slightest bit concerned about willingly opening your bank data to Grok?”</blockquote><figcaption><a href="https://www.instagram.com/reel/DeSJmBOCTWu/" target="_blank" rel="noopener noreferrer">@wutangjules · tom.wickstead reel 留言</a></figcaption></figure>
+      <figure class="quote"><blockquote>“clean up our accounting system, clean up CRM, Desk, create fb ads, Auto answer email”</blockquote><figcaption><a href="https://www.youtube.com/watch?v=douQXfdYGmA" target="_blank" rel="noopener noreferrer">@BloomingInvestments · Austin Marchese 片留言</a></figcaption></figure>
     </div>
   </section>
 
@@ -14103,21 +14099,21 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
       <p class="stats-head">✅ All agents reported back!</p>
       <div class="tiles">
       <div class="tile k-messagebus"><div class="tile-top"><span class="emoji">🟠</span><span class="tile-name">Reddit</span></div>
-        <div class="big">24<span class="unit">threads</span></div><ul><li>1,796 upvotes</li><li>828 comments</li></ul></div>
+        <div class="big">24<span class="unit">threads</span></div><ul><li>1,713 upvotes</li><li>916 comments</li></ul></div>
       <div class="tile k-frontend"><div class="tile-top"><span class="emoji">🔵</span><span class="tile-name">X</span></div>
-        <div class="big">34<span class="unit">posts</span></div><ul><li>11,067 likes</li><li>901 reposts</li><li>via Grok Bot X</li></ul></div>
+        <div class="big">40<span class="unit">posts</span></div><ul><li>1,880 likes</li><li>125 reposts</li><li>via Grok Bot X</li></ul></div>
       <div class="tile k-security"><div class="tile-top"><span class="emoji">🔴</span><span class="tile-name">YouTube</span></div>
-        <div class="big">7<span class="unit">videos</span></div><ul><li>322,255 views</li><li>6/7 with transcripts</li></ul></div>
+        <div class="big">5<span class="unit">videos</span></div><ul><li>198,118 views</li><li>5/5 with transcripts</li></ul></div>
       <div class="tile k-database"><div class="tile-top"><span class="emoji">🎵</span><span class="tile-name">TikTok</span></div>
-        <div class="big">20<span class="unit">videos</span></div><ul><li>683,266 views</li><li>26,732 likes</li></ul></div>
+        <div class="big">23<span class="unit">videos</span></div><ul><li>94,426 views</li><li>4,415 likes</li></ul></div>
       <div class="tile k-cloud"><div class="tile-top"><span class="emoji">📸</span><span class="tile-name">Instagram</span></div>
-        <div class="big">4<span class="unit">reels</span></div><ul><li>4,435 views</li><li>492 likes</li></ul></div>
+        <div class="big">8<span class="unit">reels</span></div><ul><li>168,185 views</li><li>16,274 likes</li></ul></div>
       <div class="tile k-backend"><div class="tile-top"><span class="emoji">🟡</span><span class="tile-name">Hacker News</span></div>
-        <div class="big">10<span class="unit">storys</span></div><ul><li>648 points</li><li>546 comments</li></ul></div>
+        <div class="big">9<span class="unit">storys</span></div><ul><li>643 points</li><li>545 comments</li></ul></div>
       </div>
       <div class="stats-foot">
-        <p><span class="chip">🗣️ Top voices</span>@bot, @ericzakariasson, @aiedge_ │ r/GrokBot, r/AI_Agents, r/grok</p>
-        <p><span class="chip">📎 Raw results</span><code>~/Documents/Last30Days/grok-bot-use-cases-raw-2026-10-08.md</code></p>
+        <p><span class="chip">🗣️ Top voices</span>@bot, @ericzakariasson, @vishalnai56 │ r/GrokBot, r/grok, r/AI_Agents</p>
+        <p><span class="chip">📎 Raw results</span><code>~/Documents/Last30Days/grok-bot-use-cases-raw-2026-10-12.md</code></p>
       </div>
     </div>
   </section>
@@ -14125,9 +14121,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   <section id="next" class="section">
     <h2 class="label">下一步</h2>
     <div class="invite">
-      <p class="invite-intro">我而家對 Grok Bot 嘅應用已經有幾深入嘅了解。想再深入啲，可以問我：</p>
-      <ul class="invite-list"><li><span class="arrow">→</span>點樣由零開始砌一個<q>一個 Bot 一份工</q>嘅入門組合，例如 inbox 分流 + 每週錢銀檢查</li><li><span class="arrow">→</span>銷售或者營運團隊可以直接抄嘅 routine 寫法同批准流程</li><li><span class="arrow">→</span>Grok Bot 同 Muse、Dots 喺實際用途上點揀</li></ul>
-      <p class="closing">今次用到嘅 <b class="num">24</b> 個 Reddit 討論串、<b class="num">34</b> 條 X 帖文、<b class="num">7</b> 條 YouTube 片、<b class="num">20</b> 條 TikTok、<b class="num">4</b> 條 Instagram Reels 同 <b class="num">10</b> 個 HN 討論，我全部都有連結，想睇邊個話我知就得。</p>
+      <p class="invite-intro">我而家對 Grok Bot 嘅最新用法已經幾熟。想再深入啲，可以問我：</p>
+      <ul class="invite-list"><li><span class="arrow">→</span>點樣用 Bot 自己個 email 加 X 監察，砌一個每朝自動寄嘅行業摘要</li><li><span class="arrow">→</span>ericosiu 嗰 <b class="num">21</b> 個用例邊幾個最啱細團隊照抄</li><li><span class="arrow">→</span>點樣慳 Grok Bot 用量，例如將 Claude Code 或 Codex 當執行層</li></ul>
+      <p class="closing">今次用到嘅 <b class="num">24</b> 個 Reddit 討論串、<b class="num">40</b> 條 X 帖文、<b class="num">5</b> 條 YouTube 片、<b class="num">23</b> 條 TikTok、<b class="num">8</b> 條 Instagram Reels 同 <b class="num">9</b> 個 HN 討論，我全部都有連結，想睇邊個話我知就得。</p>
     </div>
   </section>
   <footer class="pagefoot">Styled after <a href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener noreferrer">Archify</a> · 流程圖由 Archify 3.0.1 生成</footer>
